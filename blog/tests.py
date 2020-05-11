@@ -39,3 +39,11 @@ class PostTestCase(TestCase):
             'title': ['This field is required.'],
             'text': ['This field is required.'],
         })
+
+    def test_blank_form_data_fail(self):
+        form = PostForm({})
+        self.assertFalse(form.is_valid())
+        self.assertEqual(form.errors, {
+            'title': ['This field is required.'],
+            # 'text': ['This field is required.'],
+        })
