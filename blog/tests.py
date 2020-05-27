@@ -45,5 +45,5 @@ class PostTestCase(TestCase):
         self.assertFalse(form.is_valid())
         self.assertEqual(form.errors, {
             'title': ['This field is required.'],
-            # 'text': ['This field is required.'] ,
+            'text': ['This field is required.'] ,
         })
