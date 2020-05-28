@@ -5,10 +5,10 @@ jobs:
       - image: circleci/python:3.6
       - image: circleci/mysql:5.7.30
         environment:
-            MYSQL_ROOT_PASSWORD: 12345678
+            MYSQL_ROOT_PASSWORD: '12345678'
             MYSQL_DATABASE: test_db
             MYSQL_USER: user
-            MYSQL_PASSWORD: 12345678
+            MYSQL_PASSWORD: '12345678'
     steps:
       - checkout
       - restore_cache:
