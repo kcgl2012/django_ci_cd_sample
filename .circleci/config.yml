@@ -36,7 +36,7 @@ jobs:
           name: Install MySQL CLI; Import dummy data; run an example query
           command: |
             sudo apt-get install default-mysql-client
-            mysql -h 127.0.0.1 -u user -p 12345678 --execute="SELECT * FROM test_db.User"
+            mysql -h 127.0.0.1 -u user -p12345678 --execute="SELECT * FROM test_db.User"
       - run:
           name: Running tests
           command: |
